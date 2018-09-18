@@ -267,10 +267,10 @@ async function predict() {
 
 	// make predictions on the preprocessed image tensor
 	let predictions = await model.predict(tensor).data();
-
+	
 	// get the model's prediction results
 	let results = Array.from(predictions)
-
+	console.log("Ket qua ", typeof results)
 	// display the predictions in chart
 	displayChart(results)
 
